@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library App</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <form class="login-form">
+                <input type="text" name="username" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit" class="btn" id="btn-login">Login</button>
+                <p class="message">New User? <a href="#" id="show-register">Create an account</a></p>
+            </form>
+            <form action="#" class="register-form">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="password" placeholder="Password">
+                <input type="tel" name="phone" placeholder="Phone" pattern="[0-9]{10}" oninput="validatePhoneNumber(this)">
+                <button type="submit" class="btn" id="btn-register">Register</button>
+                <p class="message">Already registered? <a href="#" id="show-login">Sign in</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

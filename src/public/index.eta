@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="container-sidebar">
+                <div class="sidebar-header">
+                    <h2>Library APP</h2>
+                </div>
+                <ul class="sidebar-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Added</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Log out</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <input type="text" placeholder="Search for name or author...">
+                <div class="user-profile">
+                    <span>Mary Jane</span>
+                    <img src="images/images.jpg" alt="User Profile">
+                </div>
+            </header>
+            <section class="content">
+                <div class="section popular">
+                    <h2>POPULAR</h2>
+                    <div class="book-list">
+                        <% if (it.data && it.data.length > 0) { %>
+                            <% it.data.forEach(book => { %>
+                                <div class="book-item">
+                                    <img src="<%= book.thumbnail %>" alt="<%= book.title %>">
+                                    <div class="detail-book">
+                                        <span>Title: <span class="detail-content"><%= book.title %></span></span>
+                                        <span>Author: <span class="detail-content"><%= book.authors %></span></span>
+                                    </div>
+                                </div>
+                            <% }) %>
+                        <% } else { %>
+                            <p>No popular books available</p>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="section recommended">
+                    <h2>YOU MAY LIKE</h2>
+                    <div class="book-list">
+                        <% if (it.data && it.data.length > 0) { %>
+                            <% it.data.forEach(book => { %>
+                                <div class="book-item">
+                                    <img src="<%= book.thumbnail %>" alt="<%= book.title %>">
+                                    <p><%= book.title %><br><span><%= book.authors %></span></p>
+                                </div>
+                            <% }) %>
+                        <% } else { %>
+                            <p>No recommended books available</p>
+                        <% } %>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
