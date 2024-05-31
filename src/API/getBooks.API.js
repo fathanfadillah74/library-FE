@@ -27,4 +27,9 @@ const getBooks = async () => {
     }
 }
 
-module.exports = { getBooks };
+async function getBookById(id) {
+    const books = await getBooks();
+    return books.find(book => book.book_id === id);
+}
+
+module.exports = { getBooks, getBookById };

@@ -21,7 +21,7 @@
             <form action="#" class="register-form">
                 <input type="text" name="name" placeholder="Name">
                 <input type="text" name="email" placeholder="Email">
-                <input type="text" name="password" placeholder="Password">
+                <input type="password" name="password" placeholder="Password">
                 <input type="tel" name="phone" placeholder="Phone" pattern="[0-9]{10}" oninput="validatePhoneNumber(this)">
                 <button type="submit" class="btn" id="btn-register">Register</button>
                 <p class="message">Already registered? <a href="#" id="show-login">Sign in</a></p>

@@ -8,7 +8,9 @@ body {
 .container {
   display: flex;
   margin-left: 0px !important;
+  margin-right: 0px !important;
   padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 .container-sidebar {
@@ -48,7 +50,7 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   margin-bottom: 20px;
 }
@@ -83,13 +85,36 @@ body {
   margin-bottom: 20px;
 }
 
-.book-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.card-container {
+  border: 1px solid black;
+  padding: 20px;
 }
 
-.book-item {
+.book-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.detail-book {
+  display: flex;
+  text-align: justify;
+  gap: 5px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  align-items: center;
+}
+
+.card-image {
   background-color: #fff;
   padding: 10px;
   border-radius: 8px;
@@ -98,38 +123,25 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-.book-item:hover {
+.card-image:hover {
   scale: 1.05;
   transition: 0.5s ease-out;
 }
 
-.detail-book {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 5px;
-  text-align: start;
-  padding: 5px;
+@media (max-width: 600px) {
+  .card-container {
+    height: 300px;
+  }
 }
-
-.detail-content {
-  font-weight: bold;
-  color: black;
+/* For medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card-container {
+    height: 400px;
+  }
 }
-
-.book-item img {
-  width: 100%;
-  max-height: 230px;
-  min-height: 230px;
-  border-radius: 4px;
-}
-
-.book-item p {
-  font-size: 1rem;
-  margin: 10px 0 0;
-}
-
-.book-item span {
-  color: #888;
-  font-size: 0.9rem;
-}/*# sourceMappingURL=index.css.map */
+/* For large screens (laptops/desktops) */
+@media (min-width: 1025px) {
+  .card-container {
+    height: 637px;
+  }
+}/*# sourceMappingURL=detailPage.css.map */
