@@ -5,15 +5,12 @@ body {
     padding: 0;
 }
 
-a{
-    color: black !important;
-    text-decoration: none !important;
-}
-
 .container {
     display: flex;
     margin-left: 0px !important;
+    margin-right: 0px !important;
     padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
 .container-sidebar {
@@ -53,7 +50,7 @@ a{
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -67,7 +64,6 @@ a{
 .user-profile {
     display: flex;
     align-items: center;
-    cursor: pointer;
 }
 
 .user-profile span {
@@ -89,54 +85,40 @@ a{
     margin-bottom: 20px;
 }
 
-.book-list {
+.card-container {
+    padding: 20px;
+}
+
+.profile-container{
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 20px;
 }
 
-.book-item {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-    width: 150px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+.profile-image{
+    border-radius: 130px;
+}
 
-    &:hover {
-        scale: 1.05;
-        transition: 0.5s ease-out;
+.small-btn{
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem; 
+}
+@media (max-width: 600px) {
+    .card-container {
+        height: 300px;
     }
 }
 
-.detail-book{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 5px;
-    text-align: start;
-    padding: 5px;
+/* For medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .card-container {
+        height: 400px;
+    }
 }
 
-.detail-content{
-    font-weight: bold;
-    color: black;
-}
-
-.book-item img {
-    width: 100%;
-    max-height: 230px;
-    min-height: 230px;
-    border-radius: 4px;
-}
-
-.book-item p {
-    font-size: 1rem;
-    margin: 10px 0 0;
-}
-
-.book-item span {
-    color: #888;
-    font-size: 0.9rem;
+/* For large screens (laptops/desktops) */
+@media (min-width: 1025px) {
+    .card-container {
+        height: 637px;
+    }
 }

@@ -19,12 +19,9 @@
                     <h2>Library APP</h2>
                 </div>
                 <ul class="sidebar-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Categories</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="#">Wishlist</a></li>
-                    <li><a href="#">Added</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Log out</a></li>
+                    <li><a href="#" id="logout-button">Log out</a></li>
                 </ul>
             </div>
         </aside>
@@ -43,11 +40,10 @@
                         <% if (it.data && it.data.length > 0) { %>
                             <% it.data.forEach(book => { %>
                                 <div class="book-item">
-                                    <img src="<%= book.thumbnail %>" alt="<%= book.title %>">
-                                    <div class="detail-book">
-                                        <span>Title: <span class="detail-content"><%= book.title %></span></span>
-                                        <span>Author: <span class="detail-content"><%= book.authors %></span></span>
-                                    </div>
+                                    <a href="/detail-page/<%= book.book_id %>" >
+                                        <img src="<%= book.thumbnail %>" alt="<%= book.title %>">
+                                        <p><%= book.title %><br><span><%= book.authors %></span></p>
+                                    </a>
                                 </div>
                             <% }) %>
                         <% } else { %>

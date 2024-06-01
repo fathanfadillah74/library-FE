@@ -28,8 +28,20 @@ const getBooks = async () => {
 }
 
 async function getBookById(id) {
-    const books = await getBooks();
-    return books.find(book => book.book_id === id);
+    try {
+        const getbooks = await getBooks();
+        const book = getbooks.find(book => book.book_id === id);
+
+        if (book) {
+            book.thumbnail = book.thumbnail !== null ? book.thumbnail : 'images/default-thumbnail.jpg';
+            book.description = book.description !== null ? book.description : 'No description available';
+        }
+
+        return book;
+    } catch (error) {
+        console.error("Error in getBookById:", error);
+        return null;
+    }
 }
 
 module.exports = { getBooks, getBookById };
