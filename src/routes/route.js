@@ -42,6 +42,14 @@ const route = (app) => {
             res.status(500).send('Internal Server Error');
         }
     });
+    app.get('/wishlist', async (req, res) => {
+        try {
+            res.render('wishlist');
+        } catch (error) {
+            console.error('Error in route handler:', error);
+            res.status(500).send('Internal Server Error');
+        }
+    });
 };
 
 module.exports = { route };

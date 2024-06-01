@@ -20,14 +20,15 @@
                 </div>
                 <ul class="sidebar-menu">
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">Wishlist</a></li>
-                    <li><a href="#">Log out</a></li>
+                    <li><a href="/wishlist">Wishlist</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="#" id="logout-button">Log out</a></li>
                 </ul>
             </div>
         </aside>
         <main class="main-content">
             <header class="header">
-                <div class="user-profile">
+                <div class="user-profile" id="user-profile">
                     <span>Username</span>
                     <img src="/images/images.jpg" alt="User Profile">
                 </div>
@@ -44,7 +45,7 @@
                         </div>
                     </div>
                     <div class="profile-detail">
-                        <form class="row g-3">
+                        <form class="row g-3" id="form-edit">
                             <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Name</label>
                                 <input type="text" class="form-control" id="inputName4">
@@ -75,11 +76,6 @@
             </section>
         </main>
     </div>
-    <script>
-        function validatePhoneNumber(input) {
-            input.value = input.value.replace(/[^0-9]/g, '');
-        }
-    </script>
 </body>
 
 </html>

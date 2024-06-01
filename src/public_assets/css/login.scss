@@ -37,7 +37,7 @@ $font-family: 'Roboto', sans-serif;
 
 body{
   font-family: $font-family;
-  background: $background-color;
+  background: $background-color !important;
 }
 
 
@@ -80,6 +80,8 @@ body{
   }
   
   .message {
+    margin-top: 20px;
+    margin-bottom: 0px;
     @include message;
     a {
       text-decoration: none;
