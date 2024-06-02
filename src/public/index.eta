@@ -28,7 +28,7 @@
         </aside>
         <main class="main-content">
             <header class="header">
-                <input type="text" placeholder="Search for name or author...">
+                <input type="text"id="search-input" placeholder="Search for name or author...">
                 <div class="user-profile" id="user-profile">
                     <span>username</span>
                     <img src="images/images.jpg" alt="User Profile">
@@ -43,7 +43,7 @@
                                 <div class="book-item">
                                     <a href="/detail-page/<%= book.book_id %>" >
                                         <img src="<%= book.thumbnail %>" alt="<%= book.title %>">
-                                        <p><%= book.title %><br><span><%= book.authors %></span></p>
+                                        <p><%= book.title %><br><span><%= book.authors.split('{').join('').split('}').join('').split('"').join('') %></span></p>
                                     </a>
                                 </div>
                             <% }) %>
@@ -60,7 +60,7 @@
                                 <div class="book-item">
                                     <a href="/detail-page/<%= book.book_id %>" >
                                         <img src="<%= book.thumbnail %>" alt="<%= book.title %>">
-                                        <p><%= book.title %><br><span><%= book.authors %></span></p>
+                                        <p><%= book.title %><br><span><%= book.authors.split('{').join('').split('}').join('').split('"').join('') %></span></p>
                                     </a>
                                 </div>
                             <% }) %>

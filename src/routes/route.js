@@ -1,5 +1,6 @@
 const { getBooks, getBookById } = require('../API/getBooks.API');
 const { getUser } = require('../API/getUser.API');
+const { wishlistData } = require('../API/getWishlist.API');
 
 const route = (app) => {
     app.get('/', async (req, res) => {
@@ -19,7 +20,7 @@ const route = (app) => {
             res.status(500).send('Internal Server Error');
         }
     });
-    
+
     app.get('/detail-page/:id', async (req, res) => {
         try {
             const bookId = req.params.id;
@@ -32,7 +33,7 @@ const route = (app) => {
             console.error('Error in route handler:', error);
             res.status(500).send('Kesalahan Server Internal');
         }
-    });    
+    });
 
     app.get('/profile', async (req, res) => {
         try {
@@ -44,7 +45,8 @@ const route = (app) => {
     });
     app.get('/wishlist', async (req, res) => {
         try {
-            res.render('wishlist');
+            const user = await getUser();
+            res.render('wishlist', { data: user });
         } catch (error) {
             console.error('Error in route handler:', error);
             res.status(500).send('Internal Server Error');

@@ -18,15 +18,16 @@
                 </div>
                 <ul class="sidebar-menu">
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">Wishlist</a></li>
-                    <li><a href="#">Log out</a></li>
+                    <li><a href="/wishlist">Wishlist</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="#" id="logout-button">Log out</a></li>
                 </ul>
             </div>
         </aside>
         <main class="main-content">
             <header class="header">
-                <div class="user-profile">
-                    <span>Username</span>
+                <div class="user-profile" id="user-profile">
+                    <span>username</span>
                     <img src="/images/images.jpg" alt="User Profile">
                 </div>
             </header>
@@ -35,7 +36,7 @@
                     <div class="book-container">
                         <div class="card-image">
                             <div class="book-image">
-                                <img src="<%= it.data.thumbnail %>" alt="<%= it.data.title %>">
+                                <img id="book-image" src="<%= it.data.thumbnail %>" alt="<%= it.data.title %>" data-id="<%= it.data.book_id %>">
                             </div>
                         </div>
                         <div class="detail-book">
@@ -45,7 +46,7 @@
                             <span>Author: <span class="detail-content"><%= it.data.authors %></span></span>
                         </div>                        
                         <div class="button-container">
-                            <button type="button" class="btn btn-primary">Add to wishlist</button>
+                            <button type="button" class="btn btn-primary" id="add-wishlist-btn">Add to wishlist</button>
                             <button type="button" class="btn btn-success" id="read-button" onclick="window.open('<%= it.data.preview_link %>', '_blank')">Read Book Online</button>
                         </div>
                     </div>

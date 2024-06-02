@@ -85,8 +85,22 @@ body {
   margin-bottom: 20px;
 }
 
+.table-custom {
+  text-align: center;
+  vertical-align: middle;
+}
+.table-custom th {
+  font-size: 14px;
+}
+
 .table-custom tbody tr td {
   background-color: #f0e4d7 !important;
+}
+.table-custom tbody tr td img {
+  width: 50px;
+}
+.table-custom tbody tr td button {
+  font-size: 13px;
 }
 
 @media (max-width: 600px) {
