@@ -63,7 +63,7 @@ async function getUsername() {
         }
         userProfile.innerHTML = `
         <span>${data.name.toUpperCase()}</span>
-        <img src="images/images.jpg" alt="User Profile">
+        <img src="images/avatar.png" alt="User Profile">
         `
 
         formEdit.innerHTML = `
@@ -87,7 +87,7 @@ async function getUsername() {
         </div>
         <div class="col-12">
             <label for="inputAddress" class="form-label">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="${data.address}">
+            <input type="text" class="form-control" id="inputAddress" placeholder="${data.address ? data.address : 'Enter Your Address'}">
         </div>
         <div class="col-12">
             <button type="submit" class="btn btn-primary" id="profile-edit-btn" disabled>Save Changes</button>

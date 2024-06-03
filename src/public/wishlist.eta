@@ -29,7 +29,7 @@
                 <header class="header">
                     <div class="user-profile" id="user-profile">
                         <span>Username</span>
-                        <img src="/images/images.jpg" alt="User Profile">
+                        <img src="/images/avatar.png" alt="User Profile">
                     </div>
                 </header>
                 <section class="content">

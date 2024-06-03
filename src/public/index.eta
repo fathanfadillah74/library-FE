@@ -31,7 +31,7 @@
                 <input type="text"id="search-input" placeholder="Search for name or author...">
                 <div class="user-profile" id="user-profile">
                     <span>username</span>
-                    <img src="images/images.jpg" alt="User Profile">
+                    <img src="images/avatar.png" alt="User Profile">
                 </div>
             </header>
             <section class="content">

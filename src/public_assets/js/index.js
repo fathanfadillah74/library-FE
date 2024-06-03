@@ -59,7 +59,7 @@ async function getUsername() {
         }
         userProfile.innerHTML = `
         <span>${data.name.toUpperCase()}</span>
-        <img src="images/images.jpg" alt="User Profile">
+        <img src="images/avatar.png" alt="User Profile">
         `
     } catch (error) {
         console.log(error);
@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             logoutButton.addEventListener('click', function(event) {
                 event.preventDefault();
                 deleteCookie('token');
+                alert('Logout successfully!');
                 window.location.href = '/login';
             });
         }

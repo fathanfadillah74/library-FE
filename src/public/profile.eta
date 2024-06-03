@@ -30,14 +30,14 @@
             <header class="header">
                 <div class="user-profile" id="user-profile">
                     <span>Username</span>
-                    <img src="/images/images.jpg" alt="User Profile">
+                    <img src="/images/avatar.png" alt="User Profile">
                 </div>
             </header>
             <section class="content">
                 <div class="card-container">
                     <div class="profile-container">
                         <div class="profile-image-container">
-                            <img src="/images/images.jpg" class="profile-image" alt="Profile Image">
+                            <img src="/images/avatar.png" class="profile-image" alt="Profile Image">
                         </div>
                         <div class="profile-button">
                             <button type="button" class="btn btn-primary small-btn">Change Picture</button>

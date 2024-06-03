@@ -47,9 +47,10 @@ document.addEventListener('DOMContentLoaded', async function () {
 
             if (result.ResultCode === 1) {
                 document.cookie = `token=${result.token}; path=/`;
-
+                alert(result.message);
                 window.location.href = '/';
             } else {
+                alert(result.message);
                 console.log('Login failed:', result.message);
             }
         }
